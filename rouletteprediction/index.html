@@ -1,0 +1,306 @@
+<html>
+<head>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    <title>Roulette Prediction Tool</title>
+    <link rel="stylesheet" href="autassets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=0.7, user-scalable=0">
+    <script src="autassets/js/main.js"></script>
+    <script src="autassets/js/jquery-3.6.0.js"></script>
+  </head>
+  <body cz-shortcut-listen="true">
+    <div id="openModal" class="modalDialog">
+      <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Subscription</h2>
+        <p id="sub" style="font-size: 20px;">Your Subscription is valid until 2023-01-23 09:32:04 </p>
+      </div>
+    </div>
+    <div id="app" style="">
+      <section class="main" id="tables">
+        <div class="wrap wrap--1" onclick="jointable(this, 0);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts0">Confirmed by 2 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_0">&nbsp;<span style="color:#fff; background-color: #737373; padding:4px;">33</span>&nbsp;<span style="color:#ff3d3d; ">14</span>&nbsp;<span style="color:#fff; ">26</span>&nbsp;<span style="color:#ff3d3d; ">5</span>&nbsp;<span style="color:#fff; ">20</span>&nbsp;<span style="color:#ff3d3d; ">9</span>&nbsp;<span style="color:#fff; ">22</span>&nbsp;<span style="color:#ff3d3d; ">32</span>&nbsp;<span style="color:#ff3d3d; ">14</span>&nbsp;<span style="color:#fff; ">6</span>&nbsp;<span style="color:#fff; ">33</span>&nbsp;<span style="color:#fff; ">6</span>&nbsp;</p>
+          </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/immersive_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Immersive Roulette</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 1);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts1">Confirmed by 2 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_1">&nbsp;<span style="color:#fff; background-color: #737373; padding:4px;">20</span>&nbsp;<span style="color:#fff; ">17</span>&nbsp;<span style="color:#fff; ">17</span>&nbsp;<span style="color:#fff; ">22</span>&nbsp;<span style="color:#ff3d3d; ">36</span>&nbsp;<span style="color:#ff3d3d; ">21</span>&nbsp;<span style="color:#fff; ">17</span>&nbsp;<span style="color:#ff3d3d; ">3</span>&nbsp;<span style="color:#fff; ">35</span>&nbsp;<span style="color:#ff3d3d; ">23</span>&nbsp;<span style="color:#ff3d3d; ">19</span>&nbsp;<span style="color:#fff; ">17</span>&nbsp;</p>
+          </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/gen1_ss_thumb_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Auto-Roulette</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 2);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts2">Confirmed by 1 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_2">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">30</span>&nbsp;<span style="color:#fff; ">11</span>&nbsp;<span style="color:#ff3d3d; ">12</span>&nbsp;<span style="color:#ff3d3d; ">12</span>&nbsp;<span style="color:#fff; ">8</span>&nbsp;<span style="color:#ff3d3d; ">3</span>&nbsp;<span style="color:#ff3d3d; ">3</span>&nbsp;<span style="color:#ff3d3d; ">36</span>&nbsp;<span style="color:#ff3d3d; ">5</span>&nbsp;<span style="color:#fff; ">33</span>&nbsp;<span style="color:#ff3d3d; ">32</span>&nbsp;<span style="color:#ff3d3d; ">32</span>&nbsp;</p>
+          </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/green_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Roulette</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 3);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts3">Confirmed by 2 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_3">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">19</span>&nbsp;<span style="color:#ff3d3d; ">30</span>&nbsp;<span style="color:#ff3d3d; ">5</span>&nbsp;<span style="color:#fff; ">28</span>&nbsp;<span style="color:#ff3d3d; ">36</span>&nbsp;<span style="color:#ff3d3d; ">23</span>&nbsp;<span style="color:#ff3d3d; ">16</span>&nbsp;<span style="color:#ff3d3d; ">14</span>&nbsp;<span style="color:#ff3d3d; ">32</span>&nbsp;<span style="color:#fff; ">17</span>&nbsp;<span style="color:#ff3d3d; ">36</span>&nbsp;<span style="color:#ff3d3d; ">16</span>&nbsp;</p> 
+          </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/vipk1_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>VIP Roulette</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 4);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts4">Confirmed by 2 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_4"><span style="color:#fff; background-color: #737373; padding:4px;">8</span>&nbsp;<span style="color:#fff; ">35</span>&nbsp;<span style="color:#2bff47; ">0</span>&nbsp;<span style="color:#fff; ">10</span>&nbsp;<span style="color:#fff; ">24</span>&nbsp;<span style="color:#fff; ">13</span>&nbsp;<span style="color:#fff; ">2</span>&nbsp;<span style="color:#ff3d3d; ">19</span>&nbsp;<span style="color:#ff3d3d; ">25</span>&nbsp;<span style="color:#ff3d3d; ">25</span>&nbsp;<span style="color:#fff; ">33</span>&nbsp;<span style="color:#ff3d3d; ">25</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/hippo2_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Hippodrome Grand Casino</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 5);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts5">Confirmed by 1 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_5">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">19</span>&nbsp;<span style="color:#ff3d3d; ">14</span>&nbsp;<span style="color:#ff3d3d; ">23</span>&nbsp;<span style="color:#2bff47; ">0</span>&nbsp;<span style="color:#ff3d3d; ">12</span>&nbsp;<span style="color:#ff3d3d; ">19</span>&nbsp;<span style="color:#fff; ">2</span>&nbsp;<span style="color:#fff; ">15</span>&nbsp;<span style="color:#fff; ">13</span>&nbsp;<span style="color:#ff3d3d; ">7</span>&nbsp;<span style="color:#fff; ">28</span>&nbsp;<span style="color:#ff3d3d; ">5</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/casmlt1_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Casino Malta Roulette</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 6);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts6">Confirmed by 2 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_6">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">9</span>&nbsp;<span style="color:#fff; ">22</span>&nbsp;<span style="color:#ff3d3d; ">1</span>&nbsp;<span style="color:#fff; ">8</span>&nbsp;<span style="color:#ff3d3d; ">18</span>&nbsp;<span style="color:#fff; ">35</span>&nbsp;<span style="color:#ff3d3d; ">19</span>&nbsp;<span style="color:#fff; ">26</span>&nbsp;<span style="color:#fff; ">13</span>&nbsp;<span style="color:#fff; ">15</span>&nbsp;<span style="color:#fff; ">8</span>&nbsp;<span style="color:#ff3d3d; ">1</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/deu_vir_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Deutsches Roulette</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 7);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts7">Confirmed by 1 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_7">&nbsp;<span style="color:#fff; background-color: #737373; padding:4px;">33</span>&nbsp;<span style="color:#ff3d3d; ">30</span>&nbsp;<span style="color:#ff3d3d; ">30</span>&nbsp;<span style="color:#ff3d3d; ">19</span>&nbsp;<span style="color:#ff3d3d; ">12</span>&nbsp;<span style="color:#ff3d3d; ">14</span>&nbsp;<span style="color:#fff; ">26</span>&nbsp;<span style="color:#fff; ">24</span>&nbsp;<span style="color:#fff; ">31</span>&nbsp;<span style="color:#ff3d3d; ">32</span>&nbsp;<span style="color:#ff3d3d; ">9</span>&nbsp;<span style="color:#fff; ">4</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/lightr1_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Lightning Roulette</p>
+          </div>
+        </div>
+        
+        <!--<div class="wrap wrap--1" onclick="jointable(this, 15);" style="">-->
+        <!--  <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts15">Confirmed by 1 spin(s)</span>&nbsp; </div>-->
+        <!--  <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">-->
+        <!--    <p id="numbers_table_15"><span style="color:#fff; background-color: #737373; padding:4px;">Loading...</span></p>-->
+        <!--    </div>-->
+        <!--  <div class="container container--1" style="background:url('https://roulette.tahainfo.com/wp-content/themes/chuo/roulette/AB_Softech_IT/Services/Prediction_Service/Evo_Roulette_Prediction/2762849780/roulette/autassets/image/xroulette.jpg'); background-repeat: no-repeat; z-index: -1;">-->
+        <!--    <p>XXXtreme Lightning Roulette</p>-->
+        <!--  </div>-->
+        <!--</div>-->
+        
+        <div class="wrap wrap--1" onclick="jointable(this, 8);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts8">Confirmed by 2 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_8">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">36</span>&nbsp;<span style="color:#ff3d3d; ">5</span>&nbsp;<span style="color:#fff; ">20</span>&nbsp;<span style="color:#ff3d3d; ">7</span>&nbsp;<span style="color:#ff3d3d; ">25</span>&nbsp;<span style="color:#ff3d3d; ">21</span>&nbsp;<span style="color:#2bff47; ">0</span>&nbsp;<span style="color:#ff3d3d; ">36</span>&nbsp;<span style="color:#ff3d3d; ">9</span>&nbsp;<span style="color:#fff; ">31</span>&nbsp;<span style="color:#fff; ">17</span>&nbsp;<span style="color:#ff3d3d; ">27</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/spa_ss_thumb_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Auto-Roulette La Partage</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 9);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts9">No predictions</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_9">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">3</span>&nbsp;<span style="color:#fff; ">15</span>&nbsp;<span style="color:#fff; ">26</span>&nbsp;<span style="color:#2bff47; ">0</span>&nbsp;<span style="color:#fff; ">20</span>&nbsp;<span style="color:#ff3d3d; ">3</span>&nbsp;<span style="color:#fff; ">28</span>&nbsp;<span style="color:#ff3d3d; ">36</span>&nbsp;<span style="color:#ff3d3d; ">23</span>&nbsp;<span style="color:#fff; ">26</span>&nbsp;<span style="color:#fff; ">35</span>&nbsp;<span style="color:#ff3d3d; ">5</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/vip1_ss_thumb_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Auto-Roulette VIP</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 10);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts10">Confirmed by 1 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_10">&nbsp;<span style="color:#fff; background-color: #737373; padding:4px;">13</span>&nbsp;<span style="color:#fff; ">15</span>&nbsp;<span style="color:#fff; ">4</span>&nbsp;<span style="color:#ff3d3d; ">36</span>&nbsp;<span style="color:#fff; ">33</span>&nbsp;<span style="color:#fff; ">4</span>&nbsp;<span style="color:#fff; ">22</span>&nbsp;<span style="color:#2bff47; ">0</span>&nbsp;<span style="color:#fff; ">29</span>&nbsp;<span style="color:#ff3d3d; ">7</span>&nbsp;<span style="color:#ff3d3d; ">9</span>&nbsp;<span style="color:#fff; ">29</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/revmu1_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Ruleta en Vivo</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 11);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts11">Confirmed by 2 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_11">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">27</span>&nbsp;<span style="color:#ff3d3d; ">7</span>&nbsp;<span style="color:#fff; ">2</span>&nbsp;<span style="color:#fff; ">24</span>&nbsp;<span style="color:#fff; ">26</span>&nbsp;<span style="color:#ff3d3d; ">9</span>&nbsp;<span style="color:#fff; ">35</span>&nbsp;<span style="color:#fff; ">28</span>&nbsp;<span style="color:#ff3d3d; ">7</span>&nbsp;<span style="color:#ff3d3d; ">14</span>&nbsp;<span style="color:#fff; ">2</span>&nbsp;<span style="color:#ff3d3d; ">14</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/portmad1_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Roleta ao Vivo</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 12);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts12">Confirmed by 1 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_12">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">18</span>&nbsp;<span style="color:#ff3d3d; ">27</span>&nbsp;<span style="color:#fff; ">2</span>&nbsp;<span style="color:#fff; ">33</span>&nbsp;<span style="color:#ff3d3d; ">23</span>&nbsp;<span style="color:#fff; ">33</span>&nbsp;<span style="color:#fff; ">13</span>&nbsp;<span style="color:#ff3d3d; ">9</span>&nbsp;<span style="color:#ff3d3d; ">34</span>&nbsp;<span style="color:#fff; ">33</span>&nbsp;<span style="color:#fff; ">20</span>&nbsp;<span style="color:#fff; ">6</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/japrm1_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Japanese Roulette</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 13);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts13">Confirmed by 2 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_13">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">18</span>&nbsp;<span style="color:#ff3d3d; ">36</span>&nbsp;<span style="color:#ff3d3d; ">25</span>&nbsp;<span style="color:#fff; ">29</span>&nbsp;<span style="color:#ff3d3d; ">32</span>&nbsp;<span style="color:#ff3d3d; ">12</span>&nbsp;<span style="color:#ff3d3d; ">34</span>&nbsp;<span style="color:#ff3d3d; ">34</span>&nbsp;<span style="color:#fff; ">15</span>&nbsp;<span style="color:#ff3d3d; ">30</span>&nbsp;<span style="color:#ff3d3d; ">27</span>&nbsp;<span style="color:#fff; ">22</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/rugent1_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Ruletka Live</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 14);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts14">Confirmed by 3 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_14">&nbsp;<span style="color:#fff; background-color: #737373; padding:4px;">4</span>&nbsp;<span style="color:#ff3d3d; ">30</span>&nbsp;<span style="color:#fff; ">2</span>&nbsp;<span style="color:#fff; ">2</span>&nbsp;<span style="color:#ff3d3d; ">30</span>&nbsp;<span style="color:#ff3d3d; ">21</span>&nbsp;<span style="color:#fff; ">28</span>&nbsp;<span style="color:#fff; ">4</span>&nbsp;<span style="color:#fff; ">15</span>&nbsp;<span style="color:#2bff47; ">0</span>&nbsp;<span style="color:#fff; ">17</span>&nbsp;<span style="color:#fff; ">26</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/tkm1_vir_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Türkçe Rulet</p>
+          </div>
+        </div>
+        <div class="wrap wrap--1" onclick="jointable(this, 15);" style="">
+          <div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp; <span id="cts15">Confirmed by 5 spin(s)</span>&nbsp; </div>
+          <div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);">
+            <p id="numbers_table_15">&nbsp;<span style="color:#ff3d3d; background-color: #737373; padding:4px;">36</span>&nbsp;<span style="color:#ff3d3d; ">5</span>&nbsp;<span style="color:#ff3d3d; ">9</span>&nbsp;<span style="color:#ff3d3d; ">27</span>&nbsp;<span style="color:#fff; ">17</span>&nbsp;<span style="color:#fff; ">28</span>&nbsp;<span style="color:#fff; ">2</span>&nbsp;<span style="color:#ff3d3d; ">23</span>&nbsp;<span style="color:#ff3d3d; ">23</span>&nbsp;<span style="color:#fff; ">17</span>&nbsp;<span style="color:#fff; ">28</span>&nbsp;<span style="color:#ff3d3d; ">5</span>&nbsp;</p>
+            </div>
+          <div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/stkt1_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;">
+            <p>Stake Exclusive Roulette 1</p>
+          </div>
+        </div>
+      <div class="wrap wrap--1" onclick="jointable(this, 0);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts0">Confirmed by 1 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_0"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/immersive_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Immersive Roulette</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 1);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts1">Confirmed by 1 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_1"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/gen1_ss_thumb_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Auto-Roulette</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 2);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts2">Confirmed by 2 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_2"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/green_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Roulette</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 3);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts3">Confirmed by 1 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_3"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/vipk1_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>VIP Roulette</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 4);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts4">Confirmed by 1 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_4"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/hippo2_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Hippodrome Grand Casino</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 5);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts5">No predictions</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_5"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/casmlt1_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Casino Malta Roulette</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 6);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts6">Confirmed by 2 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_6"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/deu_vir_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Deutsches Roulette</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 7);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts7">Confirmed by 1 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_7"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/lightr1_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Lightning Roulette</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 8);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts8">Confirmed by 2 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_8"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/spa_ss_thumb_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Auto-Roulette La Partage</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 9);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts9">Confirmed by 2 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_9"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/vip1_ss_thumb_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Auto-Roulette VIP</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 10);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts10">Confirmed by 2 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_10"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/revmu1_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Ruleta en Vivo</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 11);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts11">Confirmed by 7 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_11"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/portmad1_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Roleta ao Vivo</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 12);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts12">Confirmed by 1 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_12"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/japrm1_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Japanese Roulette</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 13);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts13">Confirmed by 2 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_13"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/rugent1_imrs_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Ruletka Live</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 14);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts14">Confirmed by 2 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_14"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/tkm1_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Türkçe Rulet</p></div></div><div class="wrap wrap--1" onclick="jointable(this, 15);"><div style="position:absolute;left: 15%;top: 60%;font-size: 25px;font-weight: bold;background-color: rgba(0,0,0,0.5);color: #fff;">&nbsp;<span id="cts15">Confirmed by 4 spin(s)</span>&nbsp;</div><div style="position:absolute;left: 3%;top: 73%;font-size: 25px;font-weight: bold; background-color: rgba(0,0,0,0.5);"><p id="numbers_table_15"><span style="color:#fff;">Loading...</span></p></div><div class="container container--1" style="background:url('https://bshots.egcvi.com/thumbnail/stkt1_imr_med_L.jpg'); background-repeat: no-repeat; z-index: -1;"> <p>Stake Exclusive Roulette 1</p></div></div></section>
+      <p id="tinfo" style="visibility: hidden;"></p>
+    </div>
+    <br>
+    <br>
+    <button class="custom-btn btn-13" onclick="exitTable();" style="display: none;" id="backbtn">Go back</button>
+    <div id="recommend" style="display: none;">
+      <input class="tgl tgl-skewed" id="eReco" type="checkbox" onclick="useRecommended();">
+      <label class="tgl-btn" data-tg-off="RECOMMEND PREDICTIONS: NO" data-tg-on="RECOMMEND PREDICTIONS: YES" for="eReco" style="zoom: 1.5;display: block;margin-left: auto;margin-right: auto;"></label>
+      <br>
+      <br>
+      <div class="wrap-drop" id="rsettings">
+        <span id="selectrset">Recommend Settings</span>
+        <ul class="drop">
+          <li class="selected">
+            <a>Lowest Distance &amp; Confirmed Spins</a>
+          </li>
+          <li>
+            <a>Highest Distance &amp; Confirmed Spins</a>
+          </li>
+          <li>
+            <a>Only Lowest Distance</a>
+          </li>
+          <li>
+            <a>Only Highest Distance</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var useRemember = false;
+  
+      function remember() {
+        useRemember = true;
+      }
+  
+      function delete_cookie(name, path, domain) {
+        if (isCookie(name)) {
+          document.cookie = name + "=" + ((path) ? ";path=" + path : "") + ((domain) ? ";domain=" + domain : "") + ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        }
+      }
+  
+      function isCookie(name) {
+        return document.cookie.split(';').some(c => {
+          return c.trim().startsWith(name + '=');
+        });
+      }
+      window.getCookie = function(name) {
+        var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        if (match) return match[2];
+      }
+      if (isCookie('myToken')) {
+        document.getElementById('cb3').click();
+        document.getElementById('token').value = getCookie('myToken');
+        unlockapp();
+      }
+  
+      function unlockapp() {
+        var token = document.getElementById('token').value;
+        if (token.length == 0) {
+          return;
+        }
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            if (xhttp.responseText.length > 0) {
+              document.getElementById('err').innerHTML = 'Unlocking the app...';
+              setTimeout(function() {
+                document.getElementById('applock').remove();
+                document.getElementById('app').style.display = '';
+              }, 2000);
+              if (useRemember) {
+                document.cookie = 'myToken=' + token;
+              }
+              var scripts = document.createElement('script');
+              var data = xhttp.responseText;
+              data = data.split(',');
+              scripts.src = data[0];
+              document.getElementById('sub').innerHTML = 'Your Subscription is valid until ' + data[1];
+              document.getElementsByTagName('head')[0].appendChild(scripts);
+              location.href += "#openModal";
+            } else {
+              document.getElementById('err').innerHTML = 'Invalid Token, please try again!';
+            }
+          }
+        };
+        xhttp.open("GET", "https://roulette.tools/unlock.php?token=" + token + "&new_version=true", true);
+        xhttp.send();
+      }
+    </script>
+    <div></div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+  <div></div></body>
+  </html>
